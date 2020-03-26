@@ -12,6 +12,13 @@
       <p>{{ sayHello() }} <a :href="link">Zebra</a></p>
       <hr />
       <p v-html="htmlLink"></p>
+      <hr />
+      <button @click="increaseCounter(6, $event)">Click me</button>
+      <p>{{ counter }}</p>
+      <p @mousemove="updateCoordinates">
+        Coordinates: {{ x }} / {{ y }} - <span @mousemove.stop>DEAD SPOT</span>
+      </p>
+      <input type="text" @keyup.enter="alertMe" />
     </div>
 
     <script src="app.js"></script>
