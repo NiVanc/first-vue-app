@@ -16,6 +16,13 @@ new Vue({
       return this.counter > 5 ? "Greater than 5" : "Smaller than 5";
     }
   },
+  watch: {
+    counter() {
+      setTimeout(() => {
+        this.counter = 0;
+      }, 2000);
+    }
+  },
   methods: {
     sayHello() {
       this.title = "Welcome and pay a visit to ";
@@ -37,3 +44,6 @@ new Vue({
     }
   }
 });
+
+// Computed for sync code
+// Watch for async code
