@@ -13,9 +13,10 @@
       <hr />
       <p v-html="htmlLink"></p>
       <hr />
-      <button @click="increaseCounter(6, $event)">Click me</button>
-      <button @click="counter++">Click me</button>
-      <p>{{ counter * 2 > 50 ? "Greater than 50" : "Smaller than 50" }}</p>
+      <button @click="counter++">Increase counter</button>
+      <button @click="counterOther++">Increase other counter</button>
+      <p>{{ counter }} | {{ counterOther }}</p>
+      <p>{{ result() }} | {{ resultComponent }}</p>
       <p @mousemove="updateCoordinates">
         Coordinates: {{ x }} / {{ y }} - <span @mousemove.stop>DEAD SPOT</span>
       </p>

@@ -5,9 +5,16 @@ new Vue({
     link: "http://zebra.be",
     htmlLink: `<a href="http://zebra.be">Zebra</a>`,
     counter: 0,
+    counterOther: 0,
     x: 0,
     y: 0,
     name: "Nico"
+  },
+  computed: {
+    resultComponent() {
+      console.log("Computed");
+      return this.counter > 5 ? "Greater than 5" : "Smaller than 5";
+    }
   },
   methods: {
     sayHello() {
@@ -23,6 +30,10 @@ new Vue({
     },
     alertMe() {
       alert("Watch out, you pressed enter.");
+    },
+    result() {
+      console.log("Method");
+      return this.counter > 5 ? "Greater than 5" : "Smaller than 5";
     }
   }
 });
