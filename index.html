@@ -19,7 +19,9 @@
       <p @mousemove="updateCoordinates">
         Coordinates: {{ x }} / {{ y }} - <span @mousemove.stop>DEAD SPOT</span>
       </p>
-      <input type="text" @keyup.enter="alertMe" />
+      <input type="text" @keyup.enter="alertMe" v-model="name" />
+      <p>{{ name }}</p>
+      <hr />
     </div>
 
     <script src="app.js"></script>

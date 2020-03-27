@@ -6,7 +6,8 @@ new Vue({
     htmlLink: `<a href="http://zebra.be">Zebra</a>`,
     counter: 0,
     x: 0,
-    y: 0
+    y: 0,
+    name: "Nico"
   },
   methods: {
     sayHello() {
