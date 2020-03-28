@@ -8,7 +8,8 @@ new Vue({
     counterOther: 0,
     x: 0,
     y: 0,
-    name: "Nico"
+    name: "Nico",
+    attachRed: false
   },
   computed: {
     resultComponent() {
