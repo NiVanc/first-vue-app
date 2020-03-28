@@ -15,6 +15,12 @@ new Vue({
     resultComponent() {
       console.log("Computed");
       return this.counter > 5 ? "Greater than 5" : "Smaller than 5";
+    },
+    divClasses() {
+      return {
+        red: this.attachRed,
+        blue: !this.attachRed
+      };
     }
   },
   watch: {
