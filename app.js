@@ -9,7 +9,8 @@ new Vue({
     x: 0,
     y: 0,
     name: "Nico",
-    attachRed: false
+    attachRed: false,
+    color: "green"
   },
   computed: {
     resultComponent() {
