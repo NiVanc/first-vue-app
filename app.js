@@ -10,7 +10,8 @@ new Vue({
     y: 0,
     name: "Nico",
     attachRed: false,
-    color: "green"
+    color: "green",
+    width: 100
   },
   computed: {
     resultComponent() {
@@ -21,6 +22,12 @@ new Vue({
       return {
         red: this.attachRed,
         blue: !this.attachRed
+      };
+    },
+    myStyle() {
+      return {
+        backgroundColor: this.color,
+        width: this.width + "px"
       };
     }
   },
