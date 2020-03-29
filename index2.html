@@ -18,6 +18,30 @@
       </template>
       <p v-show="show">Do you also see me?</p>
       <button @click="show = !show">Switch</button>
+      <hr />
+      <ul>
+        <li v-for="(ingredient, index) in ingredients">
+          {{ ingredient }} ({{ index }})
+        </li>
+      </ul>
+      <button @click="ingredients.push('Secret ingredient')">
+        Add secret ingredient
+      </button>
+      <hr />
+      <template v-for="(ingredient, index) in ingredients" :key="ingredient">
+        <h3>{{ ingredient }}</h3>
+        <p>{{ index }}</p>
+      </template>
+      <hr />
+      <ul>
+        <li v-for="person in persons">
+          <div v-for="(value, key, index) in person">
+            {{ key }}: {{ value }} ({{ index }})
+          </div>
+        </li>
+      </ul>
+      <hr />
+      <span v-for="n in 15"> {{ n }}</span>
     </div>
     <script src="app2.js"></script>
   </body>
